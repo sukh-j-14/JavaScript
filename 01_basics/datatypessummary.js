@@ -51,3 +51,37 @@ console.log(typeof date); //object
 console.log(typeof regexp); //object
 console.log(typeof map); //object
 console.log(typeof set); //object
+
+//Memory management
+
+// 1. Stack memory
+// 2. Heap memory
+// Stack memory is used for primitive data types and function calls.
+// Heap memory is used for reference data types.
+// Stack memory is faster than heap memory.
+// Stack memory is used for static memory allocation.
+// Heap memory is used for dynamic memory allocation.
+// Stack memory is used for storing local variables.
+// Heap memory is used for storing objects.
+// Stack memory is used for storing function calls.
+// Heap memory is used for storing objects.
+
+let myname= "Sukhpreet Singh";
+let myname2= myname;
+myname2="Hitesh";
+console.log(myname); //Sukhpreet Singh
+console.log(myname2); //Hitesh
+
+// myname2 is a copy of myname.
+
+let userONE={
+    name:"Sukhpreet Singh",
+    age:18,
+    isActive:true
+}
+let userTWO=userONE;
+userTWO.name="Hitesh";
+console.log(userONE.name); //Hitesh
+console.log(userTWO.name); //Hitesh
+// userTWO is a reference of userONE.
+
