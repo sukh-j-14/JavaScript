@@ -51,15 +51,15 @@ console.log(Instructor); //make new name destructuring
 // }
 
 //apis in array of objects
-[
-    {
+// [
+//     {
 
-    }
-    {
+//     }
+//     {
 
-    }
-    {
+//     }
+//     {
 
-    }
-]
+//     }
+// ]
 //json formatter
