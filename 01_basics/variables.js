@@ -13,6 +13,6 @@ accountCity='Delhi'; // global variable
 // var can be redeclared 
 // do not use var bcz scope is not defined 
 
-// const can't be changed 
+// const can't be changed yes
 
 console.log(accountId);
