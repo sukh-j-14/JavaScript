@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+
+    </div>
+</body>
+<script>
+    const parent=document.querySelector('.parent');
+    // console.log(parent.children); //html collection //from parent to children
+    // console.log(parent.firstElementChild.innerHTML);
+    // console.log(parent.lastElementChild.innerHTML);
+ 
+    const dayOne=document.querySelector('.day') //only first element
+    // console.log(dayOne); //HTMLDivElement
+    // console.log(dayOne.parentElement); //HTMLDivElement
+    // console.log(dayOne.nextElementSibling); //HTMLDivElement
+
+    console.log(parent.childNodes); //NodeList
+</script>
+</html>
