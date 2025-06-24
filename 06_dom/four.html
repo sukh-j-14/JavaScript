@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: coral;">
+    <ul class="language">
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>C++</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langname){
+        const li=document.createElement('li');
+        li.innerHTML = `${langname}`;
+        document.querySelector('.language').appendChild(li);
+    }
+    addLanguage('C#');
+    addLanguage('PHP');
+    
+    function addoptiLanguage(langname){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langname));
+        document.querySelector('.language').appendChild(li);
+    }
+    addoptiLanguage('Ruby');
+    addoptiLanguage('Go');
+
+    //edit 
+
+    const secondLang=document.querySelector("li:nth-child(2)");
+    // secondLang.innerHTML = "TypeScript";
+    const newLi= document.createElement('li');
+    newLi.innerHTML = "TypeScript";
+    secondLang.replaceWith(newLi);
+
+    //remove
+    const lastLang=document.querySelector("li:last-child");
+    lastLang.remove();
+</script>
+</html>
