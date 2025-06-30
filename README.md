@@ -15,7 +15,7 @@ Welcome to my JavaScript learning journey! This repository documents my progress
 ## 01_basics
 Fundamental JavaScript concepts:
 - `hello.js`: Your first JS program.
-- `variables.js`, `datatypes.js`, `datatypessummary.js`: Variables and data types.
+- `variables.js`, `datatypes.js`, `datatypessummary.js`:  Variables and data types.
 - `numsandmaths.js`, `strings.js`: Numbers, math, and string operations.
 - `dates.js`: Working with dates.
 - `comparisons.js`, `conversionsandoperations.js`: Comparisons and type conversions.
