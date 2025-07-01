@@ -30,7 +30,7 @@ All about functions:
 - `functions.js`: Function declarations and usage.
 - `arrowfunction.js`: Arrow functions.
 - `globallocalscope.js`: Scope in JavaScript.
-- `iife.js`: Immediately Invoked Function Expressions (IIFE).
+- `iife.js`: Immediately Invoked Function Expressions (IIFE)
 
 ## 04_contolflow
 Control flow mechanisms:
