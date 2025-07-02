@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li> 
+            <!-- directy javaScript mein insert mat kro scale krne mein dikkat hoti hai -->
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElemenById('owl').onclick=function() {
+        // alert('owl clicked');   
+        // ye bhi bdhiya hai par ye utni functinality nahi deta jitni hum chahte hain
+    // }
+
+    // document.getElementById('owl').addEventListener('click', function() {
+    //     alert('owl clicked');
+    // }, false); // false means event will bubble up, true means it will capture
+
+
+    //attachEvent()
+
+
+    // document.getElementById('owl').addEventListener('click', function(e) {
+    //     console.log(e);
+    // },false)                //browser events aur window events
+
+
+    //type , timestamp , defaultPrevented , target, toElement, srcElement
+    //clientX, clientY, screenX, screenY
+    //altkey, ctrlkey, shiftkey, keyCode
+
+
+
+    //eventpropogation
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("Images Clicked");
+    // },false)
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("Owl Clicked");
+    // },false) //bubbling up
+
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("Images Clicked");
+    // },true)
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("Owl Clicked");
+    // },true) //capturing neeche ko top to bottom
+
+    // inner aur outer element alag alag rkhna hai toh stop propogation
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("Images Clicked");
+    //     e.stopPropagation();
+    // },false)
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("Owl Clicked");
+    //     e.stopPropagation();
+    // },false) 
+
+    //preventDefault
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("google clicked");
+    // },false)
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        // console.log(e.target);  //kis target se ye event trigger ho rha hai
+        console.log(e.target.tagName);
+        if(e.target.tagName==='IMG'){
+            console.log(e.target.id);
+            let removeIt=e.target.parentNode;
+        // removeIt.remove();    //nye method hai
+            removeIt.parentNode.removeChild(removeIt);
+        }
+        
+        
+        
+    },false) 
+
+
+    
+
+</script>
+</html>
