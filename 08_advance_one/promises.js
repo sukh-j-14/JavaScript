@@ -122,6 +122,8 @@ consumePromiseFive();
 
 // ab upr likhe function .then .catch se krte hein
 
+// fetch returns a promise 
+
 fetch('https://api.github.com/users/sukh-j-14')
 .then((response)=>{
     return response.json();
