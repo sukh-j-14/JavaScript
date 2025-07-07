@@ -79,35 +79,57 @@
 //     console.log("Kuch toh ho hi gya hai promise ka");
 // })
 
-const promiseFive= new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        let error=true;
-        if(!error) {
-            resolve(
-                {
-                userName : "javascript",
-                password : "123"
-                }
-            )
-        } else{
-            reject('ERROR: JS went wrong');
-        }
-    },1000)
-});
+// const promiseFive= new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         let error=true;
+//         if(!error) {
+//             resolve(
+//                 {
+//                 userName : "javascript",
+//                 password : "123"
+//                 }
+//             )
+//         } else{
+//             reject('ERROR: JS went wrong');
+//         }
+//     },1000)
+// });
 
-// let's use other method for handling like asyncawait
+// // let's use other method for handling like asyncawait
 
-async function consumePromiseFive(){
-    try{
-        const response= await promiseFive;                 // error mtlb reject ko khud se handle krlo with try catch
-        console.log(response);
-    } catch(error){
-        console.log(error);
-    }
-}
+// async function consumePromiseFive(){
+//     try{
+//         const response= await promiseFive;                 // error mtlb reject ko khud se handle krlo with try catch
+//         console.log(response);
+//     } catch(error){
+//         console.log(error);
+//     }
+// }
 
-consumePromiseFive();
+// consumePromiseFive();
 
+// async function getAllUsers(){
+//     try{
+//         const response=await fetch('https://api.github.com/users/sukh-j-14');
+//         // console.log(response);
+//         const data= await response.json();           // isko bhi time lgta hai isko bhi await krwao
+//         console.log(data);
+//     } catch(e){
+//         console.log("E", e);
+//     }
+// }
+// getAllUsers();
 
+// ab upr likhe function .then .catch se krte hein
+
+fetch('https://api.github.com/users/sukh-j-14')
+.then((response)=>{
+    return response.json();
+}).then((data)=> {
+    console.log(data);
+})
+.catch((error)=> console.log(error));
+
+//same async await jaisa hi aya
 
 
