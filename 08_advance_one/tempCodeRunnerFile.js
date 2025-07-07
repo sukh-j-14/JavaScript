@@ -1,4 +1,4 @@
-// // fetch('https://api.github.com/users/sukh-j-14').then().catch().finally();
+// fetch('https://api.github.com/users/sukh-j-14').then().catch().finally();
 
 
 // // Above is consuming promises 
@@ -78,36 +78,3 @@
 // .finally(function(){
 //     console.log("Kuch toh ho hi gya hai promise ka");
 // })
-
-const promiseFive= new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        let error=true;
-        if(!error) {
-            resolve(
-                {
-                userName : "javascript",
-                password : "123"
-                }
-            )
-        } else{
-            reject('ERROR: JS went wrong');
-        }
-    },1000)
-});
-
-// let's use other method for handling like asyncawait
-
-async function consumePromiseFive(){
-    try{
-        const response= await promiseFive;                 // error mtlb reject ko khud se handle krlo with try catch
-        console.log(response);
-    } catch(error){
-        console.log(error);
-    }
-}
-
-consumePromiseFive();
-
-
-
-
